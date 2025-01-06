@@ -9,7 +9,7 @@ namespace maraton.Controllers
     public class EredmenyekController : ControllerBase
     {
         [HttpPost]
-        ActionResult<Eredmenyek> Post(CreateEredmenyDto createEredmenyDto)
+        public ActionResult<Eredmenyek> Post(CreateEredmenyDto createEredmenyDto)
         {
             using (var context = new MaratonContext())
             {

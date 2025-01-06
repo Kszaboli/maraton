@@ -56,6 +56,26 @@ namespace maraton.Controllers
             }
         }
 
+        [HttpGet("woman")]
+        public ActionResult<Futok> GetWoman()
+        {
+            using (var context = new MaratonContext())
+            {
+                var futoks = context.Futoks.Where(item => item.Ffi == false)
+                                           .OrderBy(item => item.Fnev)
+                                           .ToList();
+
+                if (futoks.Any())
+                {
+                    return Ok(futoks);
+                }
+                else
+                {
+                    return NotFound("");
+                }
+            }
+        }
+
         [HttpPut]
         public ActionResult<Futok> Put(int id, UpdateFutoDto updateFutoDto)
         {

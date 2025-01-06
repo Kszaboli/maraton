@@ -1,6 +1,32 @@
 [
   {
     "ContainingType": "maraton.Controllers.EredmenyekController",
+    "Method": "Post",
+    "RelativePath": "api/Eredmenyek",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createEredmenyDto",
+        "Type": "maraton.Models.CreateEredmenyDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "maraton.Models.Eredmenyek",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "maraton.Controllers.EredmenyekController",
     "Method": "Put",
     "RelativePath": "api/Eredmenyek",
     "HttpMethod": "PUT",
@@ -183,6 +209,26 @@
         "IsRequired": false
       }
     ],
+    "ReturnTypes": [
+      {
+        "Type": "maraton.Models.Futok",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "maraton.Controllers.FutokController",
+    "Method": "GetWoman",
+    "RelativePath": "api/futok/woman",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": [
       {
         "Type": "maraton.Models.Futok",
